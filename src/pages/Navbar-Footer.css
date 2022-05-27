@@ -1,0 +1,17 @@
+.navbar {
+    padding: 0;
+}
+
+.navbar-brand {
+    color: #FFF;
+}
+
+.fixed-bottom,
+.container-fluid {
+    height: 72px;
+    background-color: #FF6464
+}
+
+.footer {
+    height: 100px;
+}
