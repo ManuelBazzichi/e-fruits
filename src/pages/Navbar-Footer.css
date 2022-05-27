@@ -2,18 +2,16 @@
     padding: 0;
 }
 
-.container-fluid {
-    background-color: #FF6464;
-    height: 72px;
-    padding: 0;
-}
-
 .navbar-brand {
     color: #FFF;
 }
 
-.fixed-bottom {
+.fixed-bottom,
+.container-fluid {
     height: 72px;
-    padding: 0;
     background-color: #FF6464
+}
+
+.footer {
+    height: 100px;
 }
