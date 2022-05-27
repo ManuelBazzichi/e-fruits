@@ -10,8 +10,8 @@ export default function CardShared() {
       const response = await fetch(
         "https://fruits-develhope.herokuapp.com/api"
       );
-      const fruitData = await response.json();
-      const fruits = fruitData.fruits;
+      const fruitContent = await response.json();
+      const fruits = fruitContent.fruits;
       setFruitData(fruits);
     };
     fetchData();
@@ -19,8 +19,8 @@ export default function CardShared() {
   return (
     <Container>
       <Row>
-        {fruitData.map((fruits, k) => (
-          <Col key={k} xs={12} md={4} lg={3} className="p-3">
+        {fruitData.map((fruits, i) => (
+          <Col key={i} xs={12} md={4} lg={3} className="p-3">
             <Card className="card-container border border-dark ">
               <Card.Img className="img-style" src={fruits.image} />
 
