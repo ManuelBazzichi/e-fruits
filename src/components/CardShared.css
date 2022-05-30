@@ -1,0 +1,12 @@
+.img-style {
+    height: 214px;
+    width: 100%;
+}
+
+.button-style, .button-style:active, .button-style:focus {
+    background-color:  #80ac73 !important;
+    border-color:  #80ac73 !important;
+    outline: none;
+    box-shadow: none;
+  }
+  
