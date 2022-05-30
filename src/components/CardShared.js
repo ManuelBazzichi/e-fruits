@@ -21,7 +21,7 @@ export default function CardShared() {
       <Row>
         {fruitData.map((fruits, i) => (
           <Col key={i} xs={12} md={4} lg={3} className="p-3">
-            <Card className="card-container border border-dark ">
+            <Card className="card-container border border-dark border-2 ">
               <Card.Img className="img-style" src={fruits.image} />
 
               <Card.Body>
@@ -31,7 +31,7 @@ export default function CardShared() {
                     <Card.Text>{fruits.genus}</Card.Text>
                   </div>
                   <div>
-                    <Card.Text>${fruits.price}</Card.Text>
+                    <Card.Title>${fruits.price}</Card.Title>
                   </div>
                 </div>
                 <div className="d-flex justify-content-center mt-3">
