@@ -1,16 +1,16 @@
-.button-style, .button-style-red{
+.btn-primary, .button-style-red{
     width: 9rem;
 }
-.button-style,
-.button-style:active,
-.button-style:focus {
+.btn-primary,
+.btn-primary:active,
+.btn-primary:focus {
     background-color: #80ac73;
     border-color: #80ac73;
     outline: none;
     box-shadow: none;
 }
 
-.button-style:hover {
+.btn-primary:hover {
     background-color: #6e9761;
     border-color: #6e9761;
     outline: none;

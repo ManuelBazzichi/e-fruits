@@ -11,7 +11,7 @@ export default function Modal() {
   return (
     <div>
       <button type="button" className="btn btn-primary" onClick={handleShow}>
-        Launch demo modal
+        Dettagli
       </button>
 
       <div
