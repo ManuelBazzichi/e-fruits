@@ -2,6 +2,7 @@ import Button from "react-bootstrap/Button";
 import React, { useEffect, useState } from "react";
 import { Card, Row, Col, Container } from "react-bootstrap";
 import "./CardShared.css";
+// import Modal from "./Modal";
 
 export default function CardShared() {
   const [fruitData, setFruitData] = useState([]);
@@ -36,6 +37,7 @@ export default function CardShared() {
                 </div>
                 <div className="d-flex justify-content-center mt-3">
                   <Button className="button-style w-50 ">Dettagli</Button>
+                  {/* <Modal /> */}
                 </div>
               </Card.Body>
             </Card>
