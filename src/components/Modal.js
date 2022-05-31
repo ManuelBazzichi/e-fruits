@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../assets/logo.png";
+import "./Modal.css"
 
 export default function Modal() {
   const [show, setShow] = useState(true);
@@ -48,12 +49,12 @@ export default function Modal() {
             <div className="modal-footer d-flex justify-content-between">
               <button
                 type="button"
-                className="btn btn-secondary"
+                className="btn btn-secondary button-style-red"
                 onClick={handleClose}
               >
                 Chiudi
               </button>
-              <button type="button" className="btn btn-primary">
+              <button type="button" className="btn btn-primary button-style">
                 Acquista
               </button>
             </div>
