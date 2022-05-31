@@ -1,0 +1,45 @@
+.btn-primary, .button-style-red{
+    width: 9rem;
+}
+.btn-primary,
+.btn-primary:active,
+.btn-primary:focus {
+    background-color: #80ac73;
+    border-color: #80ac73;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-primary:hover {
+    background-color: #6e9761;
+    border-color: #6e9761;
+    outline: none;
+    box-shadow: none;
+}
+
+.button-style-red,
+.button-style-red:active,
+.button-style-red:focus {
+    background-color: #F6B4B4;
+    border-color: #F6B4B4;
+    outline: none;
+    box-shadow: none;
+}
+
+.button-style-red:hover {
+    background-color: #df8989;
+    border-color: #df8989;
+    outline: none;
+    box-shadow: none;
+}
+
+.close {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    padding: 0;
+    margin-right: 5px;
+}
