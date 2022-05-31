@@ -1,7 +1,7 @@
 import React from "react";
 // import Modal from "./components/Modal";
 import { Footer } from "./components/Footer";
-import { Navbar } from "./components/Navbar";
+// import { Navbar } from "./components/Navbar";
 import LandingPage from "./pages/LandingPage";
 
 
@@ -9,7 +9,7 @@ const App = () => {
 
     return (
       <div>
-        <Navbar />
+        {/* <Navbar /> */}
         {/* <Modal /> */}
         <LandingPage /> 
         <Footer />

@@ -1,8 +1,7 @@
 import "./landingPage.css";
 import React from "react";
 import Logo from "../assets/logo.png";
-import "./Footer"
-import { Footer } from "./Footer";
+// import { Footer } from "../components/Footer";
 
 const LandingPage = () => {
   return (
@@ -29,7 +28,7 @@ const LandingPage = () => {
       <div>
         <img src={Logo} alt="logo" className="img-logo-center"></img>
       </div>
-    <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
