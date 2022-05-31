@@ -1,15 +1,11 @@
 import React from "react";
-import CardShared from "./components/CardShared";
-import { Footer } from "./pages/Footer";
-import { Navbar } from "./pages/Navbar";
-
+import LandingPage from "./pages/LandingPage";
 
 const App = () => {
+
     return (
       <div>
-        <Navbar />
-        <CardShared />
-        <Footer />
+        <LandingPage /> 
       </div>
     );
   };
