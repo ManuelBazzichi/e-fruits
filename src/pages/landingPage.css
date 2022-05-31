@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.lemons {
+  background-image: url("../assets/lemons-lp.png");
+  background-size: cover;
+}
+
+.berries {
+  background-image: url("../assets/berries-lp.png");
+  background-size: cover;
+}
+.btn {
+  background-color: #ff6464;
+  border: 1px solid #ff6464;
+}
+
+.img-logo {
+  width: 80px;
+}
+
+.img-logo-center {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(-50%);
+  width: 160px; /* Need a specific value to work */
+}

@@ -1,16 +1,17 @@
 import React from "react";
 // import Modal from "./components/Modal";
-import CardShared from "./components/CardShared";
 import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
+import LandingPage from "./pages/LandingPage";
 
 
 const App = () => {
+
     return (
       <div>
         <Navbar />
-        <CardShared />
         {/* <Modal /> */}
+        <LandingPage /> 
         <Footer />
       </div>
     );
