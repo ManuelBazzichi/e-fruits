@@ -1,17 +1,15 @@
 import React from "react";
-import CardShared from "./components/CardShared";
-import { Footer } from "./pages/Footer";
 
-import { Navbar } from "./pages/Navbar";
+import Homepage from "./pages/Homepage";
+
+
 
 
 const App = () => {
     return (
       <div>
         
-        <Navbar />
-        <CardShared />
-        <Footer />
+        <Homepage />
         
       </div>
     );

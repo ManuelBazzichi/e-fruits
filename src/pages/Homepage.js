@@ -1,16 +1,17 @@
-import React from 'react'
-import { Footer } from './Footer'
-import { Navbar } from './Navbar'
+import React, { useEffect, useState } from "react";
+import { CardShared } from "../components/CardShared";
+
+import { Footer } from "./Footer";
+import { Navbar } from "./Navbar";
 
 const Homepage = () => {
+  return (
+    <div>
+      <Navbar />
+      <CardShared />
+      <Footer />
+    </div>
+  );
+};
 
-    return(
-        <div>
-            <Navbar />
-            <Footer />
-            casdasf
-        </div>
-    )
-}
-
-export default Homepage
+export default Homepage;
