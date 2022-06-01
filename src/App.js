@@ -9,9 +9,7 @@ const App = () => {
 
     return (
       <div>
-        
-        <Homepage />
-        
+        <Homepage /> 
       </div>
     );
   };
