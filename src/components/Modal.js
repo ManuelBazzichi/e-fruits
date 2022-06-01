@@ -1,6 +1,4 @@
 import React from "react";
-// import Logo from "../assets/logo.png";
-// import { useFetchData } from "../Hooks/useFetchData";
 import "./Modal.css";
 import { Modal } from "react-bootstrap";
 
@@ -11,16 +9,7 @@ const Detail = ({ data, handleClose }) => {
         <div className="flex-grow-1">
           <img className="modal-img" src={data.image} alt="Fruit" />
         </div>
-        <div className="p-4 flex-grow-1 modal-info">
-          <h5 className="modal-title">{data.name}</h5>
-          <p>Famiglia: {data.family}</p>
-          <p>Carboidrati: {data.nutritions.carbohydrates}</p>
-          <p>Proteine: {data.nutritions.protein}</p>
-          <p>Grassi: {data.nutritions.fat}</p>
-          <p>Calorie: {data.nutritions.calories}</p>
-          <p>Zuccheri: {data.nutritions.sugar}</p>
-        </div>
-        <div className="flex-grow-0">
+        <div className="flex-grow-1 modal-info">
           <button
             onClick={() => handleClose()}
             type="button"
@@ -29,7 +18,15 @@ const Detail = ({ data, handleClose }) => {
           >
             <span aria-hidden="true">&times;</span>
           </button>
+          <h5 className="modal-title">{data.name}</h5>
+          <p>Famiglia: {data.family}</p>
+          <p>Carboidrati: {data.nutritions.carbohydrates}</p>
+          <p>Proteine: {data.nutritions.protein}</p>
+          <p>Grassi: {data.nutritions.fat}</p>
+          <p>Calorie: {data.nutritions.calories}</p>
+          <p>Zuccheri: {data.nutritions.sugar}</p>
         </div>
+        <div className="flex-grow-0"></div>
       </div>
       <div className="p-2 modal-price">
         <p className="fw-semibold ms-4 fw-bold fs-5">$ {data.price}</p>

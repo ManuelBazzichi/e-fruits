@@ -1,6 +1,8 @@
-.btn-primary, .button-style-red{
+.btn-primary,
+.button-style-red {
     width: 9rem;
 }
+
 .btn-primary,
 .btn-primary:active,
 .btn-primary:focus {
@@ -31,9 +33,13 @@
     border-color: #df8989;
     outline: none;
     box-shadow: none;
+
 }
 
 .close {
+    position: absolute;
+    right: 10px;
+    top: 2px;
     font-size: 30px;
     font-weight: bold;
     line-height: 1;
@@ -41,17 +47,7 @@
     border: 0;
     background-color: transparent;
     padding: 0;
-    margin-right: 5px;
 }
-
-/* .modalContainer {   
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: aqua;
-} */
 
 .position-fixed {
     top: 7vw;
@@ -69,6 +65,12 @@
     max-width: 250px;
 }
 
-.modal-info  p {
+.modal-info {
+    margin: 1.5rem;
+    margin-bottom: 0;
+}
+
+.modal-info p {
     margin: 0;
+    padding-bottom: 0;
 }

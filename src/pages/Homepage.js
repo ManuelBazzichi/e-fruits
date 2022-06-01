@@ -14,6 +14,7 @@ const Homepage = () => {
   const handleClose = () => setShow(true);
 
   const handleShow = (fruit) => {
+    console.log(fruit);
     setShow(false);
     setFruit(fruit)
   }
