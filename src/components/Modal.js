@@ -1,21 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "../assets/logo.png";
 import "./Modal.css"
 
-export default function Modal() {
-  const [show, setShow] = useState(true);
-
-  const handleClose = () => setShow(true);
-  const handleShow = () => setShow(false);
+export default function Modal(props) {
 
   return (
     <div>
-      <button type="button" className="btn btn-primary" onClick={handleShow}>
-        Dettagli
-      </button>
 
       <div
-        className={show ? "modal" : undefined}
+        className={props.show ? "modal" : undefined}
         role="dialog"
         aria-labelledby="exampleModalLabel"
       >
@@ -34,7 +27,7 @@ export default function Modal() {
               </div>
               <div className="flex-grow-0">
                 <button
-                  onClick={handleClose}
+                  onClick={props.handleClose}
                   type="button"
                   className="close"
                   aria-label="Close"
@@ -50,7 +43,7 @@ export default function Modal() {
               <button
                 type="button"
                 className="btn btn-secondary button-style-red"
-                onClick={handleClose}
+                onClick={props.handleClose}
               >
                 Chiudi
               </button>

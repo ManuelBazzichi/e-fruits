@@ -1,14 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 import { CardShared } from "../components/CardShared";
-
-import { Footer } from "./Footer";
-import { Navbar } from "./Navbar";
+import Modal from "../components/Modal";
 
 const Homepage = () => {
+  const [show, setShow] = useState(true);
+
+  const handleClose = () => setShow(true);
+  const handleShow = () => setShow(false);
+
   return (
     <div>
       <Navbar />
-      <CardShared />
+      <CardShared handleShow={handleShow} />
+      <Modal show={show} handleShow={handleShow} handleClose={handleClose}/>
       <Footer />
     </div>
   );

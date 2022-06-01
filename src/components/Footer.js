@@ -1,6 +1,6 @@
 import "./Navbar-Footer.css"
 
-export function Footer() {
+function Footer() {
     return (
       <nav className="fixed-bottom  footer">
       <div className="container-fluid">
@@ -9,3 +9,5 @@ export function Footer() {
     </nav>
     )
   }
+
+  export default Footer;
