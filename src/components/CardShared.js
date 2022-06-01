@@ -4,8 +4,8 @@ import { Card, Row, Col, Container } from "react-bootstrap";
 import "./CardShared.css";
 import { useFetchData } from "../Hooks/useFetchData";
 
-export function CardShared(props) {
-  const [data, load, error] = useFetchData();
+const CardShared = ({data, error, load, handleShow}) => {
+  
 
   return (
     <Container>
@@ -28,7 +28,7 @@ export function CardShared(props) {
                     </div>
                   </div>
                   <div className="d-flex justify-content-center mt-3">
-                    <Button className="button-style w-50 " onClick={props.handleShow}>Dettagli</Button>
+                    <Button className="button-style w-50 " onClick={() =>handleShow(fruits)}>Dettagli</Button>
                   </div>
                 </Card.Body>
               </Card>
@@ -38,3 +38,5 @@ export function CardShared(props) {
     </Container>
   );
 }
+
+export default CardShared;

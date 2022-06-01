@@ -1,22 +1,30 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
-import { CardShared } from "../components/CardShared";
+import CardShared from "../components/CardShared"
 import Modal from "../components/Modal";
-
+import { useFetchData } from "../Hooks/useFetchData";
+import Detail from "../components/Modal";
 
 const Homepage = () => {
   const [show, setShow] = useState(true);
+  const [data, load, error] = useFetchData();
+  const [fruit, setFruit] = useState();
 
   const handleClose = () => setShow(true);
-  const handleShow = () => setShow(false);
+
+  const handleShow = (fruit) => {
+    setShow(false);
+    setFruit(fruit)
+    console.log(fruit);
+  }
 
   return (
     <div >
       <Navbar />
-      <CardShared handleShow={handleShow} />
-      <Modal show={show} handleShow={handleShow} handleClose={handleClose}/>
-      <Footer />
+      <CardShared data={data} load={load} error={error} handleShow={handleShow}/>
+     { !show && <Detail data={fruit} handleShow={handleShow} handleClose={handleClose}/>}
+      {/* <Footer /> */}
     </div>
   );
 };
