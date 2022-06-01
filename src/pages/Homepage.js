@@ -4,6 +4,7 @@ import Footer from "../components/Footer"
 import { CardShared } from "../components/CardShared";
 import Modal from "../components/Modal";
 
+
 const Homepage = () => {
   const [show, setShow] = useState(true);
 
@@ -11,7 +12,7 @@ const Homepage = () => {
   const handleShow = () => setShow(false);
 
   return (
-    <div>
+    <div >
       <Navbar />
       <CardShared handleShow={handleShow} />
       <Modal show={show} handleShow={handleShow} handleClose={handleClose}/>
