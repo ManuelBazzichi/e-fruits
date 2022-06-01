@@ -54,10 +54,21 @@
 } */
 
 .position-fixed {
-    top: 20%;
-    left: 35%;
+    top: 7vw;
+    left: 2%;
+    right: 2%;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+}
+
+.d-flex {
+    flex-wrap: wrap-reverse;
+}
+
+.modal-img {
+    max-width: 250px;
 }
 
 .modal-info  p {
-    margin: 3px;
+    margin: 0;
 }
