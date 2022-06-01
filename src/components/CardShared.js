@@ -2,7 +2,8 @@ import Button from "react-bootstrap/Button";
 import React from "react";
 import { Card, Row, Col, Container } from "react-bootstrap";
 import "./CardShared.css";
-import { useFetchData } from "../Hooks/useFetchData";
+import "./Modal.css";
+// import { useFetchData } from "../Hooks/useFetchData";
 
 const CardShared = ({data, error, load, handleShow}) => {
   
@@ -28,7 +29,7 @@ const CardShared = ({data, error, load, handleShow}) => {
                     </div>
                   </div>
                   <div className="d-flex justify-content-center mt-3">
-                    <Button className="button-style w-50 " onClick={() =>handleShow(fruits)}>Dettagli</Button>
+                    <Button className="btn-primary w-50 " onClick={() =>handleShow(fruits)}>Dettagli</Button>
                   </div>
                 </Card.Body>
               </Card>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import CardShared from "../components/CardShared"
-import Modal from "../components/Modal";
+// import Modal from "../components/Modal";
 import { useFetchData } from "../Hooks/useFetchData";
 import Detail from "../components/Modal";
 
@@ -16,7 +16,6 @@ const Homepage = () => {
   const handleShow = (fruit) => {
     setShow(false);
     setFruit(fruit)
-    console.log(fruit);
   }
 
   return (
@@ -24,7 +23,7 @@ const Homepage = () => {
       <Navbar />
       <CardShared data={data} load={load} error={error} handleShow={handleShow}/>
      { !show && <Detail data={fruit} handleShow={handleShow} handleClose={handleClose}/>}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

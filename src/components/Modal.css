@@ -54,6 +54,10 @@
 } */
 
 .position-fixed {
-    top: 25%;
+    top: 20%;
     left: 35%;
+}
+
+.modal-info  p {
+    margin: 3px;
 }
