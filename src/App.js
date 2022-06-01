@@ -1,8 +1,9 @@
 import React from "react";
 // import Modal from "./components/Modal";
 import { Footer } from "./components/Footer";
-// import { Navbar } from "./components/Navbar";
+import { Navbar } from "./components/Navbar";
 import LandingPage from "./pages/LandingPage";
+import CardShared from "./components/CardShared"
 
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
         {/* <Navbar /> */}
         {/* <Modal /> */}
         <LandingPage /> 
+        {/* <CardShared /> */}
         <Footer />
       </div>
     );
