@@ -1,8 +1,11 @@
 import React from "react";
 import Logo from "../assets/logo.png";
+import { useFetchData } from "../Hooks/useFetchData";
 import "./Modal.css"
 
 export default function Modal(props) {
+  const [data] = useFetchData()
+
 
   return (
       <div className="position-fixed">
@@ -17,10 +20,10 @@ export default function Modal(props) {
             <div className="modal-content">
               <div className="d-flex">
                 <div className="flex-grow-1 modal-img">
-                  <img src={Logo} width={250} height={250} alt="Fruit" />
+                  <img src={data.image} width={250} height={250} alt="Fruit" />
                 </div>
                 <div className="p-4 flex-grow-1">
-                  <h5 class="modal-title">Modal title</h5>
+                  <h5 class="modal-title">{data.name}</h5>
                   <p>
                     This is some content from a media component. You can replace
                     this with any content and adjust it as needed.
