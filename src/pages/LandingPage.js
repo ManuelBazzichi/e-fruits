@@ -21,11 +21,9 @@ const LandingPage = () => {
             <h3>
               Vuoi avere i migliori frutti a casa tua? Contatta il nostro shop
             </h3>
-            <Link to={'./homepage'}>
+            <Link to={"./homepage"}>
               <button className="w-50 m-3 p-3 btn">Vai allo Shop</button>
             </Link>
-            
-
           </div>
         </div>
       </div>
