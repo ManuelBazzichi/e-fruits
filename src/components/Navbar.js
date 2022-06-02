@@ -2,7 +2,7 @@ import "./Navbar-Footer.css";
 import Logo from "../assets/logo.png";
 import Cart from "../assets/cart.png";
 
-export function Navbar() {
+function Navbar() {
   return (
     <nav className="navbar d-flex flex-nowrap">
       <div className="container-fluid">
@@ -31,3 +31,5 @@ export function Navbar() {
     </nav>
   );
 }
+
+export default Navbar;

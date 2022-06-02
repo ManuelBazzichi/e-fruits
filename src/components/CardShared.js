@@ -1,14 +1,15 @@
 import Button from "react-bootstrap/Button";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Card, Row, Col, Container } from "react-bootstrap";
 import "./CardShared.css";
-import { useFetchData } from "../Hooks/useFetchData";
+import "./Modal.css";
+// import { useFetchData } from "../Hooks/useFetchData";
 
-export function CardShared() {
-  const [data, load, error] = useFetchData();
+const CardShared = ({data, error, load, handleShow}) => {
+  
 
   return (
-    <Container>
+    <Container className="container">
       <Row>
         {!error && load && <h1>Caricamento dati in corso</h1>}
         {error && <h1>Dati non caricati</h1>}
@@ -28,7 +29,7 @@ export function CardShared() {
                     </div>
                   </div>
                   <div className="d-flex justify-content-center mt-3">
-                    <Button className="button-style w-50 ">Dettagli</Button>
+                    <Button className="btn-primary w-50 " onClick={() =>handleShow(fruits)}>Dettagli</Button>
                   </div>
                 </Card.Body>
               </Card>
@@ -38,3 +39,5 @@ export function CardShared() {
     </Container>
   );
 }
+
+export default CardShared;
