@@ -2,7 +2,8 @@ import "./Navbar-Footer.css";
 import Logo from "../assets/logo.png";
 import Cart from "../assets/cart.png";
 
-function Navbar() {
+function Navbar({ cartItemsNumber }) {
+  console.log(cartItemsNumber);
   return (
     <nav className="navbar d-flex flex-nowrap">
       <div className="container-fluid">
@@ -26,6 +27,7 @@ function Navbar() {
             className="d-inline-block align-top me-4"
             alt="Logo"
           />
+          {cartItemsNumber}
         </a>
       </div>
     </nav>

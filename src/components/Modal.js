@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Modal.css";
 import { Modal } from "react-bootstrap";
+import { CartContext } from "../App";
 
 const Detail = ({ data, handleClose }) => {
+  const { onAdd, onRemove } = useContext(CartContext);
+  console.log(data);
+
   return (
     <Modal.Dialog className="position-fixed">
       <div className="d-flex">
@@ -40,8 +44,19 @@ const Detail = ({ data, handleClose }) => {
         >
           Chiudi
         </button>
-        <button type="button" className="btn btn-primary">
+        <button
+          type="button"
+          className="btn btn-primary"
+          onClick={() => onAdd(data)}
+        >
           Acquista
+        </button>
+        <button
+          type="button"
+          className="btn btn-primary"
+          onClick={() => onRemove(data.id)}
+        >
+          Cancella
         </button>
       </div>
     </Modal.Dialog>

@@ -5,9 +5,7 @@ import "./CardShared.css";
 import "./Modal.css";
 // import { useFetchData } from "../Hooks/useFetchData";
 
-const CardShared = ({data, error, load, handleShow}) => {
-  
-
+const CardShared = ({ data, error, load, handleShow }) => {
   return (
     <Container className="container">
       <Row>
@@ -29,7 +27,12 @@ const CardShared = ({data, error, load, handleShow}) => {
                     </div>
                   </div>
                   <div className="d-flex justify-content-center mt-3">
-                    <Button className="btn-primary w-50 " onClick={() =>handleShow(fruits)}>Dettagli</Button>
+                    <Button
+                      className="btn-primary w-50 "
+                      onClick={() => handleShow(fruits)}
+                    >
+                      Dettagli
+                    </Button>
                   </div>
                 </Card.Body>
               </Card>
@@ -38,6 +41,6 @@ const CardShared = ({data, error, load, handleShow}) => {
       </Row>
     </Container>
   );
-}
+};
 
 export default CardShared;
