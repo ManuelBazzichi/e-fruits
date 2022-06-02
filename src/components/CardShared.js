@@ -9,7 +9,7 @@ const CardShared = ({data, error, load, handleShow}) => {
   
 
   return (
-    <Container>
+    <Container className="container">
       <Row>
         {!error && load && <h1>Caricamento dati in corso</h1>}
         {error && <h1>Dati non caricati</h1>}
