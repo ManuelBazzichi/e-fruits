@@ -1,13 +1,19 @@
 import "./Navbar-Footer.css";
 import Logo from "../assets/logo.png";
 import Cart from "../assets/cart.png";
+import { useNavigate } from "react-router-dom";
 
 function Navbar({ cartItemsNumber }) {
   console.log(cartItemsNumber);
+  const navigate = useNavigate();
+
+  function handleLanding() {
+    navigate("/");
+  }
   return (
     <nav className="navbar d-flex flex-nowrap">
       <div className="container-fluid">
-        <a className="navbar-brand" href=" # ">
+        <a className="navbar-brand" href=" # " onClick={handleLanding}>
           <img
             src={Logo}
             width={30}
