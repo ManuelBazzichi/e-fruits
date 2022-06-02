@@ -51,13 +51,6 @@ const Detail = ({ data, handleClose }) => {
         >
           Acquista
         </button>
-        <button
-          type="button"
-          className="btn btn-primary"
-          onClick={() => onRemove(data.id)}
-        >
-          Cancella
-        </button>
       </div>
     </Modal.Dialog>
   );
