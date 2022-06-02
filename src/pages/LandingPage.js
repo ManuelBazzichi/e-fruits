@@ -1,8 +1,8 @@
 import "./landingPage.css";
 import React from "react";
 import Logo from "../assets/logo.png";
-// import { Footer } from "../components/Footer";
-
+import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 const LandingPage = () => {
   return (
     <div className="Container d-flex flex-column vh-100 mw-100 position-relative">
@@ -21,14 +21,18 @@ const LandingPage = () => {
             <h3>
               Vuoi avere i migliori frutti a casa tua? Contatta il nostro shop
             </h3>
-            <button className="w-50 m-3 p-3 btn">Vai allo Shop</button>
+            <Link to={'./homepage'}>
+              <button className="w-50 m-3 p-3 btn">Vai allo Shop</button>
+            </Link>
+            
+
           </div>
         </div>
       </div>
       <div>
         <img src={Logo} alt="logo" className="img-logo-center"></img>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
