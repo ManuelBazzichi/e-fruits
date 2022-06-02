@@ -3,7 +3,7 @@ import Logo from "../assets/logo.png";
 import Cart from "../assets/cart.png";
 import { useNavigate } from "react-router-dom";
 
-function Navbar({ cartItemsNumber }) {
+function Navbar({ cartItemsNumber, handleShow}) {
   console.log(cartItemsNumber);
   const navigate = useNavigate();
 
@@ -27,13 +27,14 @@ function Navbar({ cartItemsNumber }) {
       <div className="container-fluid justify-content-end">
         <a href=" # ">
           <img
+            onClick={() => handleShow()}
             src={Cart}
             width={26}
             height={26}
             className="d-inline-block align-top me-4"
             alt="Logo"
           />
-          {cartItemsNumber}
+          <div className="cartNum">{cartItemsNumber}</div> 
         </a>
       </div>
     </nav>

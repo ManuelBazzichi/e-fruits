@@ -13,9 +13,17 @@
   background-image: url("../assets/berries-lp.png");
   background-size: cover;
 }
+
 .btn-landing {
-  background-color: #ff6464;
+  background-color: #ee6a6a;
   border: 1px solid #ff6464;
+  color: white;
+}
+
+.btn-landing:hover {
+  background-color: #f45b5b;
+  border-color: #df8989;
+  color: white;
 }
 
 .img-logo {
@@ -30,7 +38,8 @@
   margin-left: auto;
   margin-right: auto;
   transform: translateY(-50%);
-  width: 160px; /* Need a specific value to work */
+  width: 160px;
+  /* Need a specific value to work */
 }
 
 .row-landing {

@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 const LandingPage = () => {
   return (
-    <div className="Container d-flex flex-column vh-100 mw-100 position-relative">
+    <div className="Container overflow-hidden d-flex flex-column vh-100 mw-100 position-relative">
       <div className="row row-landing flex-grow-1">
         <div className="col">
           <div className="d-flex">

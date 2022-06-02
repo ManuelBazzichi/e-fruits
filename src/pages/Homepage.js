@@ -6,14 +6,18 @@ import CardShared from "../components/CardShared";
 import { useFetchData } from "../Hooks/useFetchData";
 import Detail from "../components/Modal";
 import { CartContext } from "../App";
+import ModalCart from "../components/ModalCart";
 
 const Homepage = () => {
   const [show, setShow] = useState(true);
+  const [showCart, setShowCart] = useState(true)
   const [data, load, error] = useFetchData();
   const [fruit, setFruit] = useState();
   const { cart } = useContext(CartContext);
 
   const handleClose = () => setShow(true);
+  const handleCloseCart= () => setShowCart(true);
+  const handleShowCart= () => setShowCart(false);
 
   const handleShow = (fruit) => {
     console.log(fruit);
@@ -27,7 +31,7 @@ const Homepage = () => {
 
   return (
     <div>
-      <Navbar cartItemsNumber={cart.length} />
+      <Navbar cartItemsNumber={cart.length} handleShow={handleShowCart} />
       <CardShared
         data={data}
         load={load}
@@ -39,6 +43,13 @@ const Homepage = () => {
           data={fruit}
           handleShow={handleShow}
           handleClose={handleClose}
+        />
+      )}
+      {!showCart && (
+        <ModalCart
+          data={fruit}
+          handleShow={handleShowCart}
+          handleClose={handleCloseCart}
         />
       )}
       <Footer />
