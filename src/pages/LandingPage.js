@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const LandingPage = () => {
   return (
     <div className="Container d-flex flex-column vh-100 mw-100 position-relative">
-      <div className="row flex-grow-1">
+      <div className="row row-landing flex-grow-1">
         <div className="col">
           <div className="d-flex">
             <img src={Logo} alt="logo" className="img-logo"></img>
@@ -14,7 +14,7 @@ const LandingPage = () => {
         </div>
         <div className="col lemons"></div>
       </div>
-      <div className="row flex-grow-1">
+      <div className="row row-landing flex-grow-1">
         <div className="col berries"></div>
         <div className="col d-flex flex-column justify-content-center align-items-center text-center">
           <div className="w-50">

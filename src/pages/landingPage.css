@@ -2,8 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
+
 .lemons {
   background-image: url("../assets/lemons-lp.png");
   background-size: cover;
@@ -33,7 +33,7 @@
   width: 160px; /* Need a specific value to work */
 }
 
-.row {
+.row-landing {
   min-width: 100vw;
   min-height: 40%;
 }
