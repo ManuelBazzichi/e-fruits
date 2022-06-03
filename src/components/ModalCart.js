@@ -4,7 +4,7 @@ import { Modal } from "react-bootstrap";
 import { CartContext } from "../App";
 
 const ModalCart = ({ data, handleClose }) => {
-  const { onAdd, onRemove } = useContext(CartContext);
+  const { cart, onAdd, onRemove } = useContext(CartContext);
   console.log(data);
 
   return (

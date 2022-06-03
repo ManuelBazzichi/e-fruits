@@ -17,10 +17,14 @@ const Homepage = () => {
 
   const handleClose = () => setShow(true);
   const handleCloseCart= () => setShowCart(true);
-  const handleShowCart= () => setShowCart(false);
+  const handleShowCart= () => {
+    setShow(true);
+    setShowCart(false);
+  };
 
   const handleShow = (fruit) => {
     console.log(fruit);
+    setShowCart(true);
     setShow(false);
     setFruit(fruit);
   };
