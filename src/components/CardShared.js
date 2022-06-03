@@ -3,7 +3,6 @@ import React from "react";
 import { Card, Row, Col, Container } from "react-bootstrap";
 import "./CardShared.css";
 import "./Modal.css";
-// import { useFetchData } from "../Hooks/useFetchData";
 
 const CardShared = ({ data, error, load, handleShow }) => {
   return (

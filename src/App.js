@@ -19,9 +19,7 @@ const App = () => {
       setCart([...cart]);
     }
   };
-
-  console.log(cart);
-
+  
   return (
     <div>
       <CartContext.Provider value={{ cart, onAdd, onRemove }}>

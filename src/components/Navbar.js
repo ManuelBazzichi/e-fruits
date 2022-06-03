@@ -4,7 +4,6 @@ import Cart from "../assets/cart.png";
 import { useNavigate } from "react-router-dom";
 
 function Navbar({ cartItemsNumber, handleShow}) {
-  console.log(cartItemsNumber);
   const navigate = useNavigate();
 
   function handleLanding() {
