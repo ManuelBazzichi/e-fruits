@@ -5,7 +5,6 @@ import { CartContext } from "../App";
 
 const Detail = ({ data, handleClose }) => {
   const { onAdd } = useContext(CartContext);
-  console.log(data);
 
   return (
     <Modal.Dialog className="position-fixed">
