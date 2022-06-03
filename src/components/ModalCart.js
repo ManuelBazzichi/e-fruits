@@ -20,16 +20,16 @@ const ModalCart = ({ data, handleClose }) => {
               alt="Fruit"
             />
           </div>
-          <div className="flex-grow-1 modal-info">
-            <h5 className="modal-title mt-2">{el.name}</h5>
+          <div className="d-flex justify-content-start flex-grow-1 modal-info">
+            <h5 className="modal-title mt-2 text-left">{el.name}</h5>
           </div>
-          <div className="p-2 modal-price">
+          <div className="d-flex  p-2 modal-price">
             <p className="fw-semibold fw-bold fs-5 mt-4">$ {el.price}</p>
           </div>
           {/* <div className="flex-grow-1 p-2 d-flex justify-content-end d-flex align-items-center">
         <p className="fw-semibold fw-bold fs-2">+</p>
         </div> */}
-          <div className="flex-grow-1 p-2 d-flex align-ite justify-content-start d-flex align-items-center">
+          <div className="flex-grow-1 p-2 d-flex justify-content-end d-flex align-items-center">
             <button
               className="modal-button fw-semibold fw-bold fs-2 border-0 bg"
               onClick={() => onRemove(el.id)}
