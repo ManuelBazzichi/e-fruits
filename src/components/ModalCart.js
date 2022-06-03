@@ -9,7 +9,10 @@ const ModalCart = ({ data, handleClose }) => {
   const { cart, onRemove } = useContext(CartContext);
   return (
     <Modal.Dialog className="position-fixed">
-      {cart.map((el, i) => (
+      <div class="modal-header">
+        <h5 class="modal-title">Carrello:</h5>
+      </div>
+      {cart.length === 0 ? <h5 className="m-3 text-center">Non ci sono prodotti</h5> : cart.map((el, i) => (
         <div key={i} className="d-flex ">
           <div className="flex-grow-1">
             <img className="modal-img" src={el.image} width={90} alt="Fruit" />
@@ -35,7 +38,7 @@ const ModalCart = ({ data, handleClose }) => {
       <div className="modal-footer d-flex justify-content-center">
         <button
           type="button"
-          className="btn btn-secondary button-style-red"
+          className="btn btn-red btn-secondary button-style-red"
           onClick={() => handleClose()}
         >
           Chiudi
