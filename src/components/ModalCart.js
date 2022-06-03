@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./Modal.css";
 import { Modal } from "react-bootstrap";
 import { CartContext } from "../App";
+import Trash from "../assets/trash.png";
 import "./ModalCart.css";
 
 const ModalCart = ({ data, handleClose }) => {
@@ -20,13 +21,13 @@ const ModalCart = ({ data, handleClose }) => {
             <p className="fw-semibold fw-bold fs-5 mt-4">$ {el.price}</p>
           </div>
           <div className="flex-grow-1 p-2 d-flex justify-content-end d-flex align-items-center">
-            <button
+            <img
               className="modal-button fw-semibold fw-bold fs-2 border-0 bg"
               onClick={() => onRemove(el.id)}
-            >
-              {" "}
-              -{" "}
-            </button>
+              width={24}
+              alt="trash"
+              src={Trash}
+            />
           </div>
         </div>
       ))}
