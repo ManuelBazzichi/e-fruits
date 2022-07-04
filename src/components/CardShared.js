@@ -4,7 +4,7 @@ import { Card, Row, Col, Container } from "react-bootstrap";
 import "./CardShared.css";
 import "./Modal.css";
 
-const CardShared = ({ data, error, load, handleShow }) => {
+const CardShared = ({ data, error, load, handleShow, handleShowEditFruit }) => {
   return (
     <Container className="container">
       <Row>
@@ -31,6 +31,12 @@ const CardShared = ({ data, error, load, handleShow }) => {
                       onClick={() => handleShow(fruits)}
                     >
                       Dettagli
+                    </Button>
+                    <Button
+                      className="btn-primary w-50 "
+                      onClick={() => handleShowEditFruit(fruits)}
+                    >
+                      Edit Card
                     </Button>
                   </div>
                 </Card.Body>

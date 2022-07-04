@@ -3,7 +3,7 @@ import Logo from "../assets/logo.png";
 import Cart from "../assets/cart.png";
 import { useNavigate } from "react-router-dom";
 
-function Navbar({ cartItemsNumber, handleShow}) {
+function Navbar({ cartItemsNumber, handleShow, handleShowAddFruit }) {
   const navigate = useNavigate();
 
   function handleLanding() {
@@ -23,7 +23,11 @@ function Navbar({ cartItemsNumber, handleShow}) {
           <span className="navbar-brand h1">E-Fruits</span>
         </a>
       </div>
+
       <div className="container-fluid justify-content-end">
+        <button className="m-4" onClick={handleShowAddFruit}>
+          Add Fruit Card
+        </button>
         <a href=" # ">
           <img
             onClick={() => handleShow()}
@@ -33,7 +37,7 @@ function Navbar({ cartItemsNumber, handleShow}) {
             className="d-inline-block align-top me-4"
             alt="Logo"
           />
-          <div className="cartNum">{cartItemsNumber}</div> 
+          <div className="cartNum">{cartItemsNumber}</div>
         </a>
       </div>
     </nav>
