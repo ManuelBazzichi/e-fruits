@@ -2,9 +2,19 @@ import "./Navbar-Footer.css";
 import Logo from "../assets/logo.png";
 import Cart from "../assets/cart.png";
 import { useNavigate } from "react-router-dom";
+import Profile from "../components/Profile";
+import { useSelector } from "react-redux";
+import Signup from "./Signup";
+import { useState } from "react";
 
-function Navbar({ cartItemsNumber, handleShow}) {
+function Navbar({ cartItemsNumber, handleShow }) {
   const navigate = useNavigate();
+  const myUser = useSelector((state) => state.myUserData.userData);
+  console.log(myUser);
+
+  const [registerPopup, setRegisterPopup] = useState(false);
+
+  const handlerRegisterPopup = () => setRegisterPopup(!registerPopup);
 
   function handleLanding() {
     navigate("/");
@@ -33,8 +43,11 @@ function Navbar({ cartItemsNumber, handleShow}) {
             className="d-inline-block align-top me-4"
             alt="Logo"
           />
-          <div className="cartNum">{cartItemsNumber}</div> 
+          <div className="cartNum">{cartItemsNumber}</div>
         </a>
+        <button onClick={() => handlerRegisterPopup()}>Login</button>
+        {registerPopup && <Signup />}
+        {myUser.length >= 1 && <Profile />}
       </div>
     </nav>
   );
