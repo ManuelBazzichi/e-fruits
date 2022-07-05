@@ -2,6 +2,7 @@ import "./Navbar-Footer.css";
 import Logo from "../assets/logo.png";
 import Cart from "../assets/cart.png";
 import { useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 function Navbar({ cartItemsNumber, handleShow, handleShowAddFruit }) {
   const navigate = useNavigate();
@@ -25,9 +26,9 @@ function Navbar({ cartItemsNumber, handleShow, handleShowAddFruit }) {
       </div>
 
       <div className="container-fluid justify-content-end">
-        <button className="m-4" onClick={handleShowAddFruit}>
+        <Button className="m-5 " onClick={handleShowAddFruit}>
           Add Fruit Card
-        </button>
+        </Button>
         <a href=" # ">
           <img
             onClick={() => handleShow()}

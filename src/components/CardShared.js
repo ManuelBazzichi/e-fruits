@@ -4,7 +4,14 @@ import { Card, Row, Col, Container } from "react-bootstrap";
 import "./CardShared.css";
 import "./Modal.css";
 
-const CardShared = ({ data, error, load, handleShow, handleShowEditFruit }) => {
+const CardShared = ({
+  data,
+  error,
+  load,
+  handleShow,
+  handleShowEditFruit,
+  handleShowDeleteFruit,
+}) => {
   return (
     <Container className="container">
       <Row>
@@ -27,16 +34,23 @@ const CardShared = ({ data, error, load, handleShow, handleShowEditFruit }) => {
                   </div>
                   <div className="d-flex justify-content-center mt-3">
                     <Button
-                      className="btn-primary w-50 "
-                      onClick={() => handleShow(fruits)}
-                    >
-                      Dettagli
-                    </Button>
-                    <Button
-                      className="btn-primary w-50 "
+                      className="btn-primary  m-2"
                       onClick={() => handleShowEditFruit(fruits)}
                     >
                       Edit Card
+                    </Button>
+
+                    <Button
+                      className="btn-primary  m-2"
+                      onClick={() => handleShowDeleteFruit(fruits)}
+                    >
+                      Delete Card
+                    </Button>
+                    <Button
+                      className="btn-primary  m-2"
+                      onClick={() => handleShow(fruits)}
+                    >
+                      Dettagli
                     </Button>
                   </div>
                 </Card.Body>

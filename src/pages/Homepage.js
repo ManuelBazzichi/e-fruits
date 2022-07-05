@@ -8,11 +8,13 @@ import { CartContext } from "../App";
 import ModalCart from "../components/ModalCart";
 import AddCardToTheShop from "../components/AddCardToTheShop";
 import EditCard from "../components/EditCard";
+import DeleteCard from "../components/DeleteCard";
 
 const Homepage = () => {
   const [show, setShow] = useState(true);
   const [showAddFruit, setShowAddFruit] = useState(false);
   const [showEditFruit, setShowEditFruit] = useState(false);
+  const [showDeleteFruit, setShowDeleteFruit] = useState(false);
   const [showCart, setShowCart] = useState(true);
   const [data, load, error] = useFetchData();
   const [fruit, setFruit] = useState();
@@ -23,8 +25,11 @@ const Homepage = () => {
   };
   const handleShowEditFruit = (fruit) => {
     setFruit(fruit);
-
     setShowEditFruit(!showEditFruit);
+  };
+  const handleShowDeleteFruit = (fruit) => {
+    setFruit(fruit);
+    setShowDeleteFruit(!showDeleteFruit);
   };
 
   const handleClose = () => setShow(true);
@@ -52,6 +57,7 @@ const Homepage = () => {
         error={error}
         handleShow={handleShow}
         handleShowEditFruit={handleShowEditFruit}
+        handleShowDeleteFruit={handleShowDeleteFruit}
       />
       {!show && (
         <Detail
@@ -71,6 +77,12 @@ const Homepage = () => {
           data={data}
           fruit={fruit}
           handleShowEditFruit={handleShowEditFruit}
+        />
+      )}
+      {showDeleteFruit && (
+        <DeleteCard
+          fruit={fruit}
+          handleShowDeleteFruit={handleShowDeleteFruit}
         />
       )}
       {!showCart && (

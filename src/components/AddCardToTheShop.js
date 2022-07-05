@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 
-const AddCardToTheShop = () => {
+const AddCardToTheShop = ({ handleShowAddFruit }) => {
   //   const [fruits, setFruits] = useState(data);
   const [addFruit, setAddFruit] = useState({
     genere: "",
@@ -124,9 +125,13 @@ const AddCardToTheShop = () => {
           onChange={handleChange}
         ></input>
       </div>
-      <button className="text-center" type="submit">
+      <hr></hr>
+      <Button className="text-center m-2 shadow" type="submit">
         Aggiungi
-      </button>
+      </Button>
+      <Button className="text-center m-2 shadow" onClick={handleShowAddFruit}>
+        Annulla
+      </Button>
     </form>
   );
 };

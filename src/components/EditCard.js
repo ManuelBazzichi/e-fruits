@@ -1,29 +1,30 @@
 import React, { useEffect, useState } from "react";
+import { Button } from "react-bootstrap";
 
-const EditCard = (fruit) => {
-  const [ediFruit, setEditFruit] = useState({
-    genere: fruit.fruit.genus,
-    nome: fruit.fruit.name,
-    famiglia: fruit.fruit.family,
-    calorie: fruit.fruit.nutritions.calories,
-    carboidrati: fruit.fruit.nutritions.carbohydrates,
-    grassi: fruit.fruit.nutritions.fat,
-    proteine: fruit.fruit.nutritions.protein,
-    zuccheri: fruit.fruit.nutritions.sugar,
-    prezzo: fruit.fruit.price,
+const EditCard = ({ fruit, handleShowEditFruit }) => {
+  const [editFruit, setEditFruit] = useState({
+    genere: fruit.genus,
+    nome: fruit.name,
+    famiglia: fruit.family,
+    calorie: fruit.nutritions.calories,
+    carboidrati: fruit.nutritions.carbohydrates,
+    grassi: fruit.nutritions.fat,
+    proteine: fruit.nutritions.protein,
+    zuccheri: fruit.nutritions.sugar,
+    prezzo: fruit.price,
   });
 
   useEffect(() => {
     console.log(fruit);
   }, []);
 
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setAddFruit({
-  //     ...addFruit,
-  //     [name]: value,
-  //   });
-  // };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setEditFruit({
+      ...editFruit,
+      [name]: value,
+    });
+  };
 
   return (
     <div>
@@ -35,7 +36,8 @@ const EditCard = (fruit) => {
             id="genere"
             type="text"
             name="genere"
-            value={ediFruit.genere}
+            value={editFruit.genere}
+            onChange={handleChange}
           ></input>
         </div>
 
@@ -45,7 +47,8 @@ const EditCard = (fruit) => {
             id="nome"
             type="text"
             name="nome"
-            value={ediFruit.nome}
+            onChange={handleChange}
+            value={editFruit.nome}
           ></input>
         </div>
         <div className="d-flex justify-content-between mt-1">
@@ -54,7 +57,8 @@ const EditCard = (fruit) => {
             id="famiglia"
             type="text"
             name="famiglia"
-            value={ediFruit.famiglia}
+            onChange={handleChange}
+            value={editFruit.famiglia}
           ></input>
         </div>
         <div className="d-flex justify-content-between mt-1">
@@ -63,7 +67,8 @@ const EditCard = (fruit) => {
             id="calorie"
             type="text"
             name="calorie"
-            value={ediFruit.calorie}
+            onChange={handleChange}
+            value={editFruit.calorie}
           ></input>
         </div>
         <div className="d-flex justify-content-between mt-1">
@@ -72,7 +77,8 @@ const EditCard = (fruit) => {
             id="carboidrati"
             type="text"
             name="carboidrati"
-            value={ediFruit.carboidrati}
+            onChange={handleChange}
+            value={editFruit.carboidrati}
           ></input>
         </div>
         <div className="d-flex justify-content-between mt-1">
@@ -81,7 +87,8 @@ const EditCard = (fruit) => {
             id="grassi"
             type="text"
             name="grassi"
-            value={ediFruit.grassi}
+            onChange={handleChange}
+            value={editFruit.grassi}
           ></input>
         </div>
         <div className="d-flex justify-content-between mt-1">
@@ -90,7 +97,8 @@ const EditCard = (fruit) => {
             id="proteine"
             type="text"
             name="proteine"
-            value={ediFruit.proteine}
+            onChange={handleChange}
+            value={editFruit.proteine}
           ></input>
         </div>
         <div className="d-flex justify-content-between mt-1">
@@ -99,7 +107,8 @@ const EditCard = (fruit) => {
             id="zuccheri"
             type="text"
             name="zuccheri"
-            value={ediFruit.zuccheri}
+            onChange={handleChange}
+            value={editFruit.zuccheri}
           ></input>
         </div>
         <div className="d-flex justify-content-between mt-1 ">
@@ -108,12 +117,20 @@ const EditCard = (fruit) => {
             id="prezzo"
             type="text"
             name="prezzo"
-            value={ediFruit.prezzo}
+            onChange={handleChange}
+            value={editFruit.prezzo}
           ></input>
         </div>
-        <button className="text-center" type="submit">
+        <hr></hr>
+        <Button className="text-center m-2 shadow" type="submit">
           Modifica
-        </button>
+        </Button>
+        <Button
+          className="text-center m-2 shadow"
+          onClick={handleShowEditFruit}
+        >
+          Annulla
+        </Button>
       </form>
     </div>
   );
