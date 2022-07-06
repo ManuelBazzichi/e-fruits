@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 const DeleteCard = ({ fruit, handleShowDeleteFruit }) => {
   return (
     <div className="center d-flex flex-column align-items-center top-50 left-50 text-center position-fixed p-5 bg-white w-50">
-      <h2>Confermi di voler eliminare la card {fruit.name}?</h2>
+      <h2>Confermi di voler eliminare il frutto {fruit.name}?</h2>
       <img className="w-50 shadow" src={fruit.image}></img>
       <div>
         <hr></hr>

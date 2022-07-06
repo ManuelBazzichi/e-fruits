@@ -37,14 +37,14 @@ const CardShared = ({
                       className="btn-primary  m-2"
                       onClick={() => handleShowEditFruit(fruits)}
                     >
-                      Edit Card
+                      Edit Fruit
                     </Button>
 
                     <Button
                       className="btn-primary  m-2"
                       onClick={() => handleShowDeleteFruit(fruits)}
                     >
-                      Delete Card
+                      Delete Fruit
                     </Button>
                     <Button
                       className="btn-primary  m-2"

@@ -27,7 +27,7 @@ function Navbar({ cartItemsNumber, handleShow, handleShowAddFruit }) {
 
       <div className="container-fluid justify-content-end">
         <Button className="m-5 " onClick={handleShowAddFruit}>
-          Add Fruit Card
+          Add Fruit
         </Button>
         <a href=" # ">
           <img
