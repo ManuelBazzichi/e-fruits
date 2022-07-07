@@ -1,7 +1,7 @@
 import React from "react";
 import { register } from "../state/userSlice";
 import { useDispatch } from "react-redux";
-import "./Profile.css";
+import "./Signup.css";
 
 const Signup = () => {
   const dispatch = useDispatch();
@@ -14,12 +14,25 @@ const Signup = () => {
     dispatch(register({ email, password }));
   };
   return (
-    <div className="FormContainer">
-      <form className="FormModal" onSubmit={handlerSubmit}>
+    <div className="container">
+      <form onSubmit={handlerSubmit}>
         {/* <input name="nome" type="text" /> */}
-        <input name="email" type="email" />
-        <input name="password" type="password" />
-        <button type="submit">Invia</button>
+
+        <div className="form-signin">
+          <h2 className="form-signin-heading">Login</h2>
+          <label htmlFor="email">Email:</label>
+          <input className="form-control" name="email" type="email" />
+        </div>
+
+        <div className="form-signin">
+          <label htmlFor="password">Password:</label>
+          <input className="form-control" name="password" type="password" />
+        </div>
+        <div className="button">
+          <button className="button-style" type="submit">
+            Invia
+          </button>
+        </div>
       </form>
     </div>
   );

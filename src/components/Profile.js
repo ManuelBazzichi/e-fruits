@@ -1,3 +1,4 @@
+import "./Signup.css";
 import React from "react";
 import { useSelector } from "react-redux";
 import { logout } from "../state/userSlice";
@@ -8,8 +9,8 @@ function Profile() {
   const myUser = useSelector((state) => state.myUserData.userData);
   console.log(myUser);
   return (
-    <div>
-      Ciao {myUser[0]?.email}
+    <div className="App">
+      <h2> Ciao {myUser[0]?.email} </h2>
       <button onClick={() => dispatch(logout())}>Logout</button>
     </div>
   );
