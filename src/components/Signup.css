@@ -1,6 +1,5 @@
 form {
   position: fixed;
-  height: 20rem;
   width: 250px;
   margin-top: 30%;
   bottom: 0;
@@ -11,7 +10,9 @@ form {
   z-index: 1;
   margin: auto;
   border-radius: 8px;
+  max-height: 42%;
 }
+
 .form-signin {
   display: flex;
   flex-direction: column;
@@ -21,8 +22,6 @@ form {
 }
 
 .App {
-  width: 300px;
-  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -33,29 +32,52 @@ form {
   align-items: center;
   margin: 1rem;
 }
-.Submit-button {
+.submit-button {
   width: 100px;
   height: 50px;
   color: white;
   font-size: larger;
   background-color: #ff6464;
+  border: none;
+  border-radius: 8%;
 }
 
 .form-control {
   width: 220px;
 }
-.Welcome {
+.welcome {
   color: white;
-  font-size: xx-large;
 }
-.Login-button {
-  width: 50px;
+.login-button {
   height: 30px;
+  border: none;
+  color: white;
+  background-color: transparent;
 }
-.Logout-button {
-  width: 50px;
+.logout-button {
   height: 30px;
   border: none;
   background-color: transparent;
   color: white;
+}
+
+.closeP {
+  display: flex;
+  justify-content: center;
+}
+.Title {
+  color: white;
+  text-align: center;
+}
+.container-x {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+.x {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: large;
 }

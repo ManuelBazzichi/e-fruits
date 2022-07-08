@@ -9,11 +9,11 @@ function Profile() {
   const myUser = useSelector((state) => state.myUserData.userData);
   console.log(myUser);
   return (
-    <div className="App">
-      <h2 className="Welcome"> Ciao {myUser[0]?.name} </h2>
-      <button className="Logout-button" onClick={() => dispatch(logout())}>
+    <div className="app">
+      <button className="logout-button" onClick={() => dispatch(logout())}>
         Logout
       </button>
+      {/* <button> {myUser[0]?.name} </button> */}
     </div>
   );
 }

@@ -34,8 +34,9 @@ function Navbar({ cartItemsNumber, handleShow }) {
           <span className="navbar-brand h1">E-Fruits</span>
         </a>
       </div>
+
       <div className="container-fluid justify-content-end">
-        <a href=" # ">
+        <div className="carrello">
           <img
             onClick={() => handleShow()}
             src={Cart}
@@ -45,16 +46,17 @@ function Navbar({ cartItemsNumber, handleShow }) {
             alt="Logo"
           />
           <div className="cartNum">{cartItemsNumber}</div>
-        </a>
+        </div>
         <div>
           <button
-            className="Login-button"
-            onClick={() => handlerRegisterPopup()}
+            className="login-button"
+            onClick={handlerRegisterPopup}
+            hidden={myUser.length >= 1 && <Profile />}
           >
             Login
           </button>
         </div>
-        {registerPopup && <Signup />}
+        {registerPopup && <Signup login={setRegisterPopup} />}
         {myUser.length >= 1 && <Profile />}
       </div>
     </nav>
