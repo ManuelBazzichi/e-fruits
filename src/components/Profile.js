@@ -10,8 +10,10 @@ function Profile() {
   console.log(myUser);
   return (
     <div className="App">
-      <h2> Ciao {myUser[0]?.email} </h2>
-      <button onClick={() => dispatch(logout())}>Logout</button>
+      <h2 className="Welcome"> Ciao {myUser[0]?.name} </h2>
+      <button className="Logout-button" onClick={() => dispatch(logout())}>
+        Logout
+      </button>
     </div>
   );
 }

@@ -8,18 +8,20 @@ const Signup = () => {
   const handlerSubmit = (e) => {
     e.preventDefault();
 
-    // const name = e.target.nome.value;
+    const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    dispatch(register({ email, password }));
+    dispatch(register({ email, password, name }));
   };
   return (
-    <div className="container">
+    <div className="container-form">
       <form onSubmit={handlerSubmit}>
-        {/* <input name="nome" type="text" /> */}
-
+        <h2 className="form-signin">Login</h2>
         <div className="form-signin">
-          <h2 className="form-signin-heading">Login</h2>
+          <label htmlFor="name">Name:</label>
+          <input className="form-control" name="name" type="text" />
+        </div>
+        <div className="form-signin">
           <label htmlFor="email">Email:</label>
           <input className="form-control" name="email" type="email" />
         </div>
@@ -29,7 +31,7 @@ const Signup = () => {
           <input className="form-control" name="password" type="password" />
         </div>
         <div className="button">
-          <button className="button-style" type="submit">
+          <button className="Submit-button" type="submit">
             Invia
           </button>
         </div>

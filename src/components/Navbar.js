@@ -46,9 +46,14 @@ function Navbar({ cartItemsNumber, handleShow }) {
           />
           <div className="cartNum">{cartItemsNumber}</div>
         </a>
-        <button className="Login" onClick={() => handlerRegisterPopup()}>
-          Login
-        </button>
+        <div>
+          <button
+            className="Login-button"
+            onClick={() => handlerRegisterPopup()}
+          >
+            Login
+          </button>
+        </div>
         {registerPopup && <Signup />}
         {myUser.length >= 1 && <Profile />}
       </div>

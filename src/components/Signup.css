@@ -19,21 +19,43 @@ form {
   align-items: center;
   color: white;
 }
+
+.App {
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 1rem;
 }
-.button-style {
+.Submit-button {
   width: 100px;
   height: 50px;
   color: white;
-  background: linear-gradient(to right, #ffce00 50%, #ffce00 50%, #f85d5d);
+  font-size: larger;
+  background-color: #ff6464;
 }
+
 .form-control {
   width: 220px;
 }
-.Login {
-  position: absolute;
+.Welcome {
+  color: white;
+  font-size: xx-large;
+}
+.Login-button {
+  width: 50px;
+  height: 30px;
+}
+.Logout-button {
+  width: 50px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  color: white;
 }
